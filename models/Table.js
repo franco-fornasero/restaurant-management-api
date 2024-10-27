@@ -3,7 +3,7 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../src/config/database');
 
 const Table = sequelize.define('Table', {
-    number: {
+    id: {
         type: DataTypes.STRING,
         allowNull: false,
         primaryKey: true

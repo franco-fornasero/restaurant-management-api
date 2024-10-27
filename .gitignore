@@ -186,8 +186,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# config file
-*.config
+# config 
+config/
 
 # .env file
 .env

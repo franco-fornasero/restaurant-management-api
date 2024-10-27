@@ -9,6 +9,10 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true
       },
+      number: {
+        type: Sequelize.INTEGER,
+        allowNull: true
+      },
       reservationId: {
         type: Sequelize.INTEGER,
         references: {
