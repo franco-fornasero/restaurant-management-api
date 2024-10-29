@@ -2,6 +2,7 @@ const { DataTypes } = require('sequelize');
 const sequelize = require('../src/config/database');
 import User from './User';
 import Day from './Day';
+import Table from './Table';
 
 
 const Reservation = sequelize.define('reservation', {
@@ -35,9 +36,9 @@ const Reservation = sequelize.define('reservation', {
         allowNull: false
     },
     status: {
-        type: DataTypes.ENUM('pending', 'confirmed', 'cancelled'),
+        type: DataTypes.ENUM('confirmed', 'cancelled'),
         allowNull: false,
-        defaultValue: 'pending'
+        defaultValue: 'confirmed'
     },
     createdAt: {
         type: DataTypes.DATE,

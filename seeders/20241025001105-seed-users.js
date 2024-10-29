@@ -5,7 +5,8 @@ const { faker } = require('@faker-js/faker');
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    const users = [...Array(10)].map(() => ({
+    // TODO maybe can do this with Array.from
+    const users = [...Array(40)].map(() => ({ 
       name: faker.person.fullName(),
       email: faker.internet.email(),
       phone: faker.phone.number({ style: 'international' }),
@@ -15,8 +16,7 @@ module.exports = {
       updatedAt: new Date()
     }));
 
-    // add admin user
-
+    // Add an admin user
     users.push({
       name: 'Admin',
       email: 'admin@admin.com',
